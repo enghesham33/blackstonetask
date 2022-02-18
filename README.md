@@ -1,5 +1,6 @@
-# blackstonetask
-Evaluation task for Blackstone company
+# Clone the project from Github
+- Open Terminal
+- Run this command git clone https://github.com/enghesham33/blackstonetask.git
 
 # Instructions for running the project:
 - Open Terminal
@@ -11,4 +12,6 @@ Evaluation task for Blackstone company
 # Recommended XCode version is 13.2
 
 # VIPER Architicure is used in this project
+
+# Final work is on main branch
 
