@@ -8,11 +8,11 @@
 import Foundation
 
 
-class EventsResponse: Codable {
+struct EventsResponse: Codable {
     var events: [Event]?
 }
 
-class Event: Codable {
+struct Event: Codable {
     var id: Int?
     var title: String?
     var dateTimeUTC: String?
@@ -25,7 +25,7 @@ class Event: Codable {
     }
 }
 
-class Venue: Codable {
+struct Venue: Codable {
     var id: Int?
     var type: String?
     var displayLocation: String?
@@ -36,7 +36,7 @@ class Venue: Codable {
     }
 }
 
-class Performer: Codable {
+struct Performer: Codable {
     var id: Int?
     var name: String?
     var image: String?

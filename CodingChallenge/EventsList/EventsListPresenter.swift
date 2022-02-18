@@ -15,7 +15,6 @@ class EventsListPresenter: EventsListPresenterProtocol {
     var router: EventsListRouterProtocol?
     
     func viewLoaded() {
-        view?.showLoader()
         getEventsList(searchQuery: "")
     }
     

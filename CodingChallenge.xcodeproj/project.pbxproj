@@ -28,7 +28,7 @@
 		0088518D27BFCDA80071278C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088518B27BFCDA80071278C /* Main.storyboard */; };
 		0088518F27BFCDAA0071278C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0088518E27BFCDAA0071278C /* Assets.xcassets */; };
 		0088519227BFCDAA0071278C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088519027BFCDAA0071278C /* LaunchScreen.storyboard */; };
-		0088519D27BFCDAA0071278C /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088519C27BFCDAA0071278C /* CodingChallengeTests.swift */; };
+		0088519D27BFCDAA0071278C /* EventsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088519C27BFCDAA0071278C /* EventsListPresenterTests.swift */; };
 		008851A727BFCDAA0071278C /* CodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008851A627BFCDAA0071278C /* CodingChallengeUITests.swift */; };
 		008851A927BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008851A827BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift */; };
 		00D6033127C02D0B00E274DF /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033027C02D0B00E274DF /* EventDetailsView.swift */; };
@@ -40,6 +40,12 @@
 		00D6033E27C0340C00E274DF /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033D27C0340C00E274DF /* RealmManager.swift */; };
 		00D6034027C0370E00E274DF /* EventViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033F27C0370E00E274DF /* EventViewItem.swift */; };
 		00D6034227C03A6300E274DF /* EventDetailsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034127C03A6300E274DF /* EventDetailsLocalDataManager.swift */; };
+		00D6034527C04B4900E274DF /* MockEventsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034427C04B4900E274DF /* MockEventsListInteractor.swift */; };
+		00D6034727C04D3A00E274DF /* MockEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034627C04D3A00E274DF /* MockEventsListView.swift */; };
+		00D6034927C0512600E274DF /* MockEventsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034827C0512600E274DF /* MockEventsListPresenter.swift */; };
+		00D6034B27C051EA00E274DF /* EventsListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */; };
+		00D6034D27C0529800E274DF /* MockEventsListAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */; };
+		00D6034F27C052C600E274DF /* MockEventsListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */; };
 		97BEEE3108825093BAB88C71 /* Pods_CodingChallenge_CodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71F8E8810497DDFE8B5A458 /* Pods_CodingChallenge_CodingChallengeUITests.framework */; };
 		9F53CEE59840316118488371 /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */; };
 		C6F1D970376DA39022E93695 /* Pods_CodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */; };
@@ -87,7 +93,7 @@
 		0088519127BFCDAA0071278C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0088519327BFCDAA0071278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0088519827BFCDAA0071278C /* CodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0088519C27BFCDAA0071278C /* CodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeTests.swift; sourceTree = "<group>"; };
+		0088519C27BFCDAA0071278C /* EventsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListPresenterTests.swift; sourceTree = "<group>"; };
 		008851A227BFCDAA0071278C /* CodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008851A627BFCDAA0071278C /* CodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITests.swift; sourceTree = "<group>"; };
 		008851A827BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -100,6 +106,12 @@
 		00D6033D27C0340C00E274DF /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		00D6033F27C0370E00E274DF /* EventViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewItem.swift; sourceTree = "<group>"; };
 		00D6034127C03A6300E274DF /* EventDetailsLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsLocalDataManager.swift; sourceTree = "<group>"; };
+		00D6034427C04B4900E274DF /* MockEventsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListInteractor.swift; sourceTree = "<group>"; };
+		00D6034627C04D3A00E274DF /* MockEventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListView.swift; sourceTree = "<group>"; };
+		00D6034827C0512600E274DF /* MockEventsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListPresenter.swift; sourceTree = "<group>"; };
+		00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListInteractorTests.swift; sourceTree = "<group>"; };
+		00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListAPIDataManager.swift; sourceTree = "<group>"; };
+		00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListLocalDataManager.swift; sourceTree = "<group>"; };
 		19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4004AF35218451A651FE4793 /* Pods-CodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CodingChallengeTests/Pods-CodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +154,7 @@
 		00311F1327BFDEAF008EF5C1 /* EventsList */ = {
 			isa = PBXGroup;
 			children = (
+				00D6034327C04B2900E274DF /* Mocks */,
 				00311F1F27BFE5E9008EF5C1 /* Cells */,
 				00311F1427BFDEE0008EF5C1 /* EventsListView.swift */,
 				00311F1D27BFE5E5008EF5C1 /* EventsListProtocols.swift */,
@@ -249,7 +262,8 @@
 		0088519B27BFCDAA0071278C /* CodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				0088519C27BFCDAA0071278C /* CodingChallengeTests.swift */,
+				0088519C27BFCDAA0071278C /* EventsListPresenterTests.swift */,
+				00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */,
 			);
 			path = CodingChallengeTests;
 			sourceTree = "<group>";
@@ -270,6 +284,18 @@
 				00D6033D27C0340C00E274DF /* RealmManager.swift */,
 			);
 			path = LocalDB;
+			sourceTree = "<group>";
+		};
+		00D6034327C04B2900E274DF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				00D6034427C04B4900E274DF /* MockEventsListInteractor.swift */,
+				00D6034627C04D3A00E274DF /* MockEventsListView.swift */,
+				00D6034827C0512600E274DF /* MockEventsListPresenter.swift */,
+				00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */,
+				00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		596009D76AC579837668F624 /* Frameworks */ = {
@@ -536,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00311F1E27BFE5E5008EF5C1 /* EventsListProtocols.swift in Sources */,
+				00D6034727C04D3A00E274DF /* MockEventsListView.swift in Sources */,
 				00311F3027BFFB7D008EF5C1 /* EventsListAPIDataManager.swift in Sources */,
 				00311F2627BFE9DF008EF5C1 /* Event.swift in Sources */,
 				00311F3327BFFC43008EF5C1 /* NetworkingManager.swift in Sources */,
@@ -545,11 +572,14 @@
 				00311F1A27BFE1FE008EF5C1 /* Extensions.swift in Sources */,
 				00D6034227C03A6300E274DF /* EventDetailsLocalDataManager.swift in Sources */,
 				0088518627BFCDA80071278C /* AppDelegate.swift in Sources */,
+				00D6034F27C052C600E274DF /* MockEventsListLocalDataManager.swift in Sources */,
+				00D6034D27C0529800E274DF /* MockEventsListAPIDataManager.swift in Sources */,
 				00311F3727C0062E008EF5C1 /* EventsListRouter.swift in Sources */,
 				00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */,
 				00311F1227BFD2DF008EF5C1 /* BaseVC.swift in Sources */,
 				00D6034027C0370E00E274DF /* EventViewItem.swift in Sources */,
 				00311F2C27BFFA1A008EF5C1 /* EventsListPresenter.swift in Sources */,
+				00D6034927C0512600E274DF /* MockEventsListPresenter.swift in Sources */,
 				00311F2227BFE602008EF5C1 /* EventCell.swift in Sources */,
 				00D6033727C02FD100E274DF /* EventDetailsInteractor.swift in Sources */,
 				0088518827BFCDA80071278C /* SceneDelegate.swift in Sources */,
@@ -560,6 +590,7 @@
 				00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */,
 				00311F1627BFDEE0008EF5C1 /* EventsListView.swift in Sources */,
 				00311F2827BFEAD8008EF5C1 /* StatusServer.swift in Sources */,
+				00D6034527C04B4900E274DF /* MockEventsListInteractor.swift in Sources */,
 				00311F1C27BFE5BC008EF5C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +599,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0088519D27BFCDAA0071278C /* CodingChallengeTests.swift in Sources */,
+				0088519D27BFCDAA0071278C /* EventsListPresenterTests.swift in Sources */,
+				00D6034B27C051EA00E274DF /* EventsListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
