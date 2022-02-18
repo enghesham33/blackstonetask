@@ -23,8 +23,12 @@ class EventsListPresenter: EventsListPresenterProtocol {
         return interactor?.events?.count ?? 0
     }
     
-    func getItemForRow(index: Int) -> Event? {
-        return interactor?.events?[index]
+    func getItemForRow(index: Int) -> EventViewItem? {
+        let event = interactor?.events?[index]
+        let dateInUTC = DateManager.convertStringToDate(dateString: event?.dateTimeUTC ?? "", timeZoneId: "UTC")
+        let dateInUTCString = DateManager.convertDateToString(date: dateInUTC, format: "EEE, dd MMM yyyy hh:mm a")
+                
+        return EventViewItem(id: event?.id, photoUrl: event?.performers?.first?.image, name: event?.title, place: event?.venue?.displayLocation, time: DateManager.utcToLocal(dateStr: dateInUTCString, format: "EEE, dd MMM yyyy hh:mm a"), isFavourite: interactor?.isEventInFavourites(eventId: event?.id ?? 0) ?? false)
     }
     
     func getEventsList(searchQuery: String) {
@@ -32,8 +36,8 @@ class EventsListPresenter: EventsListPresenterProtocol {
         interactor?.getEventsList(searchQuery: searchQuery)
     }
     
-    func openEventDetails(event: Event?) {
-        router?.openEventDetails(view: view, event: event)
+    func openEventDetails(event: EventViewItem?, index: Int, delegate: EventDetailsDelegate?) {
+        router?.openEventDetails(view: view, event: event, index: index, delegate: delegate)
     }
 }
 

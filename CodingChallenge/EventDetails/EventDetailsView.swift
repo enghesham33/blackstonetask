@@ -16,6 +16,7 @@ class EventDetailsView: BaseView {
     @IBOutlet weak var eventPlaceLabel: UILabel!
     
     var presenter: EventDetailsPresenterProtocol?
+    var delegate: EventDetailsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,26 +24,30 @@ class EventDetailsView: BaseView {
     }
     
     @IBAction func favouriteButtonPressed(_ sender: Any) {
-        
+        presenter?.changeFavouriteStatus(eventId: presenter?.getEvent()?.id ?? 0)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
+        delegate?.refreshFavourite(eventIndex: presenter?.getEventIndex() ?? -1, isFavourite: presenter?.getEvent()?.isFavourite ?? false)
         navigationController?.popViewController(animated: true)
     }
 }
 
 extension EventDetailsView: EventDetailsViewProtocol {
-    func showData(event: Event?) {
+    func showData(event: EventViewItem?) {
         if let event = event {
-            if let image = event.performers?.first?.image, let url = URL(string: image) {
+            if let image = event.photoUrl, let url = URL(string: image) {
                 eventPhotoImageView.sd_setImage(with: url, completed: nil)
             }
             
-            eventNameLabel.text = event.title
-            eventPlaceLabel.text = event.venue?.displayLocation
-            let dateInUTC = DateManager.convertStringToDate(dateString: event.dateTimeUTC ?? "", timeZoneId: "UTC")
-            let dateInUTCString = DateManager.convertDateToString(date: dateInUTC, format: "EEE, dd MMM yyyy hh:mm a")
-            eventTimeLabel.text = DateManager.utcToLocal(dateStr: dateInUTCString, format: "EEE, dd MMM yyyy hh:mm a")
+            eventNameLabel.text = event.name
+            eventPlaceLabel.text = event.place
+            eventTimeLabel.text = event.time
+            refreshFavouriteButtonIcon(isFavourite: event.isFavourite)
         }
+    }
+    
+    func refreshFavouriteButtonIcon(isFavourite: Bool) {
+        favouriteButton.setImage(isFavourite ? UIImage(named: "favourite") : UIImage(named: "unfavourite"), for: .normal)
     }
 }

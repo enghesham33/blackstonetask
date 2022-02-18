@@ -18,17 +18,20 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var favouriteImageView: UIImageView!
     
-    var event: Event! {
+    var event: EventViewItem! {
         didSet {
-            if let image = event.performers?.first?.image, let url = URL(string: image) {
-                eventPhotoImageView.sd_setImage(with: url, completed: nil)
-            }
-            
-            eventNameLabel.text = event.title
-            eventPlaceLabel.text = event.venue?.displayLocation
-            let dateInUTC = DateManager.convertStringToDate(dateString: event.dateTimeUTC ?? "", timeZoneId: "UTC")
-            let dateInUTCString = DateManager.convertDateToString(date: dateInUTC, format: "EEE, dd MMM yyyy hh:mm a")
-            eventTimeLabel.text = DateManager.utcToLocal(dateStr: dateInUTCString, format: "EEE, dd MMM yyyy hh:mm a")
+            populateData()
         }
+    }
+    
+    func populateData() {
+        if let image = event.photoUrl, let url = URL(string: image) {
+            eventPhotoImageView.sd_setImage(with: url, completed: nil)
+        }
+        
+        eventNameLabel.text = event.name
+        eventPlaceLabel.text = event.place
+        eventTimeLabel.text = event.time
+        favouriteImageView.isHidden = !event.isFavourite
     }
 }

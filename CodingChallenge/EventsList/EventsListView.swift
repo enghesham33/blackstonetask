@@ -73,6 +73,14 @@ extension EventsListView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.openEventDetails(event: presenter?.getItemForRow(index: indexPath.row))
+        presenter?.openEventDetails(event: presenter?.getItemForRow(index: indexPath.row), index: indexPath.row, delegate: self)
+    }
+}
+
+extension EventsListView: EventDetailsDelegate {
+    func refreshFavourite(eventIndex: Int, isFavourite: Bool) {
+        let cell = eventsTableView.cellForRow(at: IndexPath(row: eventIndex, section: 0)) as? EventCell
+        cell?.event.isFavourite = isFavourite
+        cell?.populateData()
     }
 }

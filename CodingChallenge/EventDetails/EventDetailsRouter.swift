@@ -21,17 +21,21 @@ class EventDetailsRouter: EventDetailsRouterProtocol {
         }
     }
     
-    static func createEventDetailsView(event: Event?) -> EventDetailsView {
+    static func createEventDetailsView(event: EventViewItem?, index: Int, delegate: EventDetailsDelegate?) -> EventDetailsView {
         let view = storyBoard.instantiateViewController(withIdentifier: Constants.viewIdentifier) as! EventDetailsView
-        var presenter: EventDetailsPresenterProtocol & EventDetailsInteractorOutputProtocol = EventDetailsPresenter()
-        let interactor: EventDetailsInteractorInputProtocol = EventDetailsInteractor(event: event)
+        var presenter: EventDetailsPresenterProtocol & EventDetailsInteractorOutputProtocol = EventDetailsPresenter(eventIndex: index)
+        var interactor: EventDetailsInteractorInputProtocol = EventDetailsInteractor(event: event)
         let router: EventDetailsRouterProtocol = EventDetailsRouter()
+        let localDataManager: EventDetailsLocalDataManagerProtocol = EventDetailsLocalDataManager()
         
         // Connecting
         view.presenter = presenter
+        view.delegate = delegate
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
+        interactor.presenter = presenter
+        interactor.localDatamanager = localDataManager
         
         return view
     }

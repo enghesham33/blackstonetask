@@ -36,6 +36,10 @@
 		00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */; };
 		00D6033727C02FD100E274DF /* EventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */; };
 		00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033827C0300600E274DF /* EventDetailsRouter.swift */; };
+		00D6033B27C0334000E274DF /* FavouriteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033A27C0334000E274DF /* FavouriteEvent.swift */; };
+		00D6033E27C0340C00E274DF /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033D27C0340C00E274DF /* RealmManager.swift */; };
+		00D6034027C0370E00E274DF /* EventViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033F27C0370E00E274DF /* EventViewItem.swift */; };
+		00D6034227C03A6300E274DF /* EventDetailsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034127C03A6300E274DF /* EventDetailsLocalDataManager.swift */; };
 		97BEEE3108825093BAB88C71 /* Pods_CodingChallenge_CodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71F8E8810497DDFE8B5A458 /* Pods_CodingChallenge_CodingChallengeUITests.framework */; };
 		9F53CEE59840316118488371 /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */; };
 		C6F1D970376DA39022E93695 /* Pods_CodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */; };
@@ -92,6 +96,10 @@
 		00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsPresenter.swift; sourceTree = "<group>"; };
 		00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractor.swift; sourceTree = "<group>"; };
 		00D6033827C0300600E274DF /* EventDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsRouter.swift; sourceTree = "<group>"; };
+		00D6033A27C0334000E274DF /* FavouriteEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteEvent.swift; sourceTree = "<group>"; };
+		00D6033D27C0340C00E274DF /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		00D6033F27C0370E00E274DF /* EventViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewItem.swift; sourceTree = "<group>"; };
+		00D6034127C03A6300E274DF /* EventDetailsLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsLocalDataManager.swift; sourceTree = "<group>"; };
 		19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4004AF35218451A651FE4793 /* Pods-CodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CodingChallengeTests/Pods-CodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,8 +176,10 @@
 		00311F2427BFE9D3008EF5C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				00D6033C27C033F300E274DF /* LocalDB */,
 				00311F2527BFE9DF008EF5C1 /* Event.swift */,
 				00311F2727BFEAD8008EF5C1 /* StatusServer.swift */,
+				00D6033F27C0370E00E274DF /* EventViewItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 				00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */,
 				00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */,
 				00D6033827C0300600E274DF /* EventDetailsRouter.swift */,
+				00D6034127C03A6300E274DF /* EventDetailsLocalDataManager.swift */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -250,6 +261,15 @@
 				008851A827BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift */,
 			);
 			path = CodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		00D6033C27C033F300E274DF /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				00D6033A27C0334000E274DF /* FavouriteEvent.swift */,
+				00D6033D27C0340C00E274DF /* RealmManager.swift */,
+			);
+			path = LocalDB;
 			sourceTree = "<group>";
 		};
 		596009D76AC579837668F624 /* Frameworks */ = {
@@ -523,16 +543,20 @@
 				00D6033127C02D0B00E274DF /* EventDetailsView.swift in Sources */,
 				00311F2E27BFFAF7008EF5C1 /* EventsListInteractor.swift in Sources */,
 				00311F1A27BFE1FE008EF5C1 /* Extensions.swift in Sources */,
+				00D6034227C03A6300E274DF /* EventDetailsLocalDataManager.swift in Sources */,
 				0088518627BFCDA80071278C /* AppDelegate.swift in Sources */,
 				00311F3727C0062E008EF5C1 /* EventsListRouter.swift in Sources */,
 				00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */,
 				00311F1227BFD2DF008EF5C1 /* BaseVC.swift in Sources */,
+				00D6034027C0370E00E274DF /* EventViewItem.swift in Sources */,
 				00311F2C27BFFA1A008EF5C1 /* EventsListPresenter.swift in Sources */,
 				00311F2227BFE602008EF5C1 /* EventCell.swift in Sources */,
 				00D6033727C02FD100E274DF /* EventDetailsInteractor.swift in Sources */,
 				0088518827BFCDA80071278C /* SceneDelegate.swift in Sources */,
 				00311F3927C0079F008EF5C1 /* EventsListLocalDataManager.swift in Sources */,
+				00D6033E27C0340C00E274DF /* RealmManager.swift in Sources */,
 				00311F2A27BFF593008EF5C1 /* DateManager.swift in Sources */,
+				00D6033B27C0334000E274DF /* FavouriteEvent.swift in Sources */,
 				00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */,
 				00311F1627BFDEE0008EF5C1 /* EventsListView.swift in Sources */,
 				00311F2827BFEAD8008EF5C1 /* StatusServer.swift in Sources */,

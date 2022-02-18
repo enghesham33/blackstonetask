@@ -126,14 +126,13 @@
                                             <action selector="backButtonPressed:" destination="aAE-Ec-8OS" eventType="touchUpInside" id="MVR-wh-QPP"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEY-zS-rIb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEY-zS-rIb">
                                         <rect key="frame" x="378" y="8" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="YCO-LN-xeS"/>
                                             <constraint firstAttribute="height" constant="20" id="gWf-Rz-LHZ"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="back_arrow"/>
                                         <connections>
                                             <action selector="favouriteButtonPressed:" destination="aAE-Ec-8OS" eventType="touchUpInside" id="9xM-Oz-uRh"/>
                                         </connections>

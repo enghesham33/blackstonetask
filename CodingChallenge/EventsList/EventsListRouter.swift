@@ -41,8 +41,8 @@ class EventsListRouter: EventsListRouterProtocol {
         return view
     }
     
-    func openEventDetails(view: EventsListViewProtocol?, event: Event?) {
-        let eventDetailsView = EventDetailsRouter.createEventDetailsView(event: event)
+    func openEventDetails(view: EventsListViewProtocol?, event: EventViewItem?, index: Int, delegate: EventDetailsDelegate?) {
+        let eventDetailsView = EventDetailsRouter.createEventDetailsView(event: event, index: index, delegate: delegate)
         if let sourceView = view as? UIViewController {
             sourceView.navigationController?.pushViewController(eventDetailsView, animated: true)
         }

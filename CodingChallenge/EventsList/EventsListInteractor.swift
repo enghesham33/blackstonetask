@@ -26,4 +26,8 @@ class EventsListInteractor: EventsListInteractorInputProtocol {
             self?.presenter?.hideLoader()
         })
     }
+    
+    func isEventInFavourites(eventId: Int) -> Bool {
+        return localDatamanager?.isEventInFavourites(eventId: eventId) ?? false
+    }
 }

@@ -25,9 +25,9 @@ protocol EventsListPresenterProtocol {
     
     func viewLoaded()
     func numberOfItems() -> Int
-    func getItemForRow(index: Int) -> Event?
+    func getItemForRow(index: Int) -> EventViewItem?
     func getEventsList(searchQuery: String)
-    func openEventDetails(event: Event?)
+    func openEventDetails(event: EventViewItem?, index: Int, delegate: EventDetailsDelegate?)
 }
 
 // MARK: Interactor -> Presenter
@@ -47,12 +47,13 @@ protocol EventsListInteractorInputProtocol {
     var events: [Event]? { get set }
 
     func getEventsList(searchQuery: String)
+    func isEventInFavourites(eventId: Int) -> Bool
 }
 
 // MARK:- Router Protocols
 protocol EventsListRouterProtocol {
     static func createEventsListView() -> EventsListView
-    func openEventDetails(view: EventsListViewProtocol?, event: Event?)
+    func openEventDetails(view: EventsListViewProtocol?, event: EventViewItem?, index: Int, delegate: EventDetailsDelegate?)
 }
 
 // MARK:- APIDATAMANAGER Protocols
@@ -62,5 +63,5 @@ protocol EventsListAPIDataManagerProtocol {
 
 // MARK:- LocalDataManager Protocols
 protocol EventsListLocalDataManagerProtocol {
-    
+    func isEventInFavourites(eventId: Int) -> Bool
 }
