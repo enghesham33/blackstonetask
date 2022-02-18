@@ -31,6 +31,11 @@
 		0088519D27BFCDAA0071278C /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088519C27BFCDAA0071278C /* CodingChallengeTests.swift */; };
 		008851A727BFCDAA0071278C /* CodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008851A627BFCDAA0071278C /* CodingChallengeUITests.swift */; };
 		008851A927BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008851A827BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift */; };
+		00D6033127C02D0B00E274DF /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033027C02D0B00E274DF /* EventDetailsView.swift */; };
+		00D6033327C02D7900E274DF /* EventDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033227C02D7900E274DF /* EventDetailsProtocol.swift */; };
+		00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */; };
+		00D6033727C02FD100E274DF /* EventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */; };
+		00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6033827C0300600E274DF /* EventDetailsRouter.swift */; };
 		97BEEE3108825093BAB88C71 /* Pods_CodingChallenge_CodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71F8E8810497DDFE8B5A458 /* Pods_CodingChallenge_CodingChallengeUITests.framework */; };
 		9F53CEE59840316118488371 /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */; };
 		C6F1D970376DA39022E93695 /* Pods_CodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */; };
@@ -82,6 +87,11 @@
 		008851A227BFCDAA0071278C /* CodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008851A627BFCDAA0071278C /* CodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITests.swift; sourceTree = "<group>"; };
 		008851A827BFCDAA0071278C /* CodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00D6033027C02D0B00E274DF /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		00D6033227C02D7900E274DF /* EventDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsProtocol.swift; sourceTree = "<group>"; };
+		00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsPresenter.swift; sourceTree = "<group>"; };
+		00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractor.swift; sourceTree = "<group>"; };
+		00D6033827C0300600E274DF /* EventDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsRouter.swift; sourceTree = "<group>"; };
 		19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4004AF35218451A651FE4793 /* Pods-CodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CodingChallengeTests/Pods-CodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +185,11 @@
 		00311F3A27C01753008EF5C1 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
+				00D6033027C02D0B00E274DF /* EventDetailsView.swift */,
+				00D6033227C02D7900E274DF /* EventDetailsProtocol.swift */,
+				00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */,
+				00D6033627C02FD100E274DF /* EventDetailsInteractor.swift */,
+				00D6033827C0300600E274DF /* EventDetailsRouter.swift */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -504,16 +519,21 @@
 				00311F3027BFFB7D008EF5C1 /* EventsListAPIDataManager.swift in Sources */,
 				00311F2627BFE9DF008EF5C1 /* Event.swift in Sources */,
 				00311F3327BFFC43008EF5C1 /* NetworkingManager.swift in Sources */,
+				00D6033327C02D7900E274DF /* EventDetailsProtocol.swift in Sources */,
+				00D6033127C02D0B00E274DF /* EventDetailsView.swift in Sources */,
 				00311F2E27BFFAF7008EF5C1 /* EventsListInteractor.swift in Sources */,
 				00311F1A27BFE1FE008EF5C1 /* Extensions.swift in Sources */,
 				0088518627BFCDA80071278C /* AppDelegate.swift in Sources */,
 				00311F3727C0062E008EF5C1 /* EventsListRouter.swift in Sources */,
+				00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */,
 				00311F1227BFD2DF008EF5C1 /* BaseVC.swift in Sources */,
 				00311F2C27BFFA1A008EF5C1 /* EventsListPresenter.swift in Sources */,
 				00311F2227BFE602008EF5C1 /* EventCell.swift in Sources */,
+				00D6033727C02FD100E274DF /* EventDetailsInteractor.swift in Sources */,
 				0088518827BFCDA80071278C /* SceneDelegate.swift in Sources */,
 				00311F3927C0079F008EF5C1 /* EventsListLocalDataManager.swift in Sources */,
 				00311F2A27BFF593008EF5C1 /* DateManager.swift in Sources */,
+				00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */,
 				00311F1627BFDEE0008EF5C1 /* EventsListView.swift in Sources */,
 				00311F2827BFEAD8008EF5C1 /* StatusServer.swift in Sources */,
 				00311F1C27BFE5BC008EF5C1 /* Constants.swift in Sources */,

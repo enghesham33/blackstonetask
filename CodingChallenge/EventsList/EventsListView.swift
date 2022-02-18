@@ -73,8 +73,6 @@ extension EventsListView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let event = presenter?.getItemForRow(index: indexPath.row) {
-            presenter?.openEventDetails(event: event)
-        }
+        presenter?.openEventDetails(event: presenter?.getItemForRow(index: indexPath.row))
     }
 }

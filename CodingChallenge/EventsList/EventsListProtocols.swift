@@ -5,8 +5,6 @@
 //  Created by Hesham Donia on 18/02/2022.
 //
 
-import UIKit
-
 // MARK:- View protocols
 // MARK: Presenter -> View
 protocol EventsListViewProtocol {
@@ -29,7 +27,7 @@ protocol EventsListPresenterProtocol {
     func numberOfItems() -> Int
     func getItemForRow(index: Int) -> Event?
     func getEventsList(searchQuery: String)
-    func openEventDetails(event: Event)
+    func openEventDetails(event: Event?)
 }
 
 // MARK: Interactor -> Presenter
@@ -54,7 +52,7 @@ protocol EventsListInteractorInputProtocol {
 // MARK:- Router Protocols
 protocol EventsListRouterProtocol {
     static func createEventsListView() -> EventsListView
-    func openEventDetails(event: Event)
+    func openEventDetails(view: EventsListViewProtocol?, event: Event?)
 }
 
 // MARK:- APIDATAMANAGER Protocols

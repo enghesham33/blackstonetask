@@ -32,8 +32,8 @@ class EventsListPresenter: EventsListPresenterProtocol {
         interactor?.getEventsList(searchQuery: searchQuery)
     }
     
-    func openEventDetails(event: Event) {
-        router?.openEventDetails(event: event)
+    func openEventDetails(event: Event?) {
+        router?.openEventDetails(view: view, event: event)
     }
 }
 
