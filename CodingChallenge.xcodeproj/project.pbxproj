@@ -46,6 +46,12 @@
 		00D6034B27C051EA00E274DF /* EventsListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */; };
 		00D6034D27C0529800E274DF /* MockEventsListAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */; };
 		00D6034F27C052C600E274DF /* MockEventsListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */; };
+		00D6035227C0558400E274DF /* MockEventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035127C0558400E274DF /* MockEventDetailsInteractor.swift */; };
+		00D6035427C0559600E274DF /* MockEventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035327C0559600E274DF /* MockEventDetailsPresenter.swift */; };
+		00D6035627C055A800E274DF /* MockEventDetailsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035527C055A800E274DF /* MockEventDetailsLocalDataManager.swift */; };
+		00D6035827C055B700E274DF /* MockEventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035727C055B700E274DF /* MockEventDetailsView.swift */; };
+		00D6035A27C0581400E274DF /* EventDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035927C0581400E274DF /* EventDetailsPresenterTests.swift */; };
+		00D6035C27C0582600E274DF /* EventDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6035B27C0582600E274DF /* EventDetailsInteractorTests.swift */; };
 		97BEEE3108825093BAB88C71 /* Pods_CodingChallenge_CodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71F8E8810497DDFE8B5A458 /* Pods_CodingChallenge_CodingChallengeUITests.framework */; };
 		9F53CEE59840316118488371 /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */; };
 		C6F1D970376DA39022E93695 /* Pods_CodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */; };
@@ -112,6 +118,12 @@
 		00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListInteractorTests.swift; sourceTree = "<group>"; };
 		00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListAPIDataManager.swift; sourceTree = "<group>"; };
 		00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsListLocalDataManager.swift; sourceTree = "<group>"; };
+		00D6035127C0558400E274DF /* MockEventDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventDetailsInteractor.swift; sourceTree = "<group>"; };
+		00D6035327C0559600E274DF /* MockEventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventDetailsPresenter.swift; sourceTree = "<group>"; };
+		00D6035527C055A800E274DF /* MockEventDetailsLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventDetailsLocalDataManager.swift; sourceTree = "<group>"; };
+		00D6035727C055B700E274DF /* MockEventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventDetailsView.swift; sourceTree = "<group>"; };
+		00D6035927C0581400E274DF /* EventDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		00D6035B27C0582600E274DF /* EventDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		19D6D6064ACF179C2B2A1597 /* Pods_CodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2950863C393F9432C42C0FEB /* Pods_CodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4004AF35218451A651FE4793 /* Pods-CodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-CodingChallengeTests/Pods-CodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +220,7 @@
 		00311F3A27C01753008EF5C1 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
+				00D6035027C0556800E274DF /* Mocks */,
 				00D6033027C02D0B00E274DF /* EventDetailsView.swift */,
 				00D6033227C02D7900E274DF /* EventDetailsProtocol.swift */,
 				00D6033427C02E9F00E274DF /* EventDetailsPresenter.swift */,
@@ -264,6 +277,8 @@
 			children = (
 				0088519C27BFCDAA0071278C /* EventsListPresenterTests.swift */,
 				00D6034A27C051EA00E274DF /* EventsListInteractorTests.swift */,
+				00D6035927C0581400E274DF /* EventDetailsPresenterTests.swift */,
+				00D6035B27C0582600E274DF /* EventDetailsInteractorTests.swift */,
 			);
 			path = CodingChallengeTests;
 			sourceTree = "<group>";
@@ -294,6 +309,17 @@
 				00D6034827C0512600E274DF /* MockEventsListPresenter.swift */,
 				00D6034C27C0529800E274DF /* MockEventsListAPIDataManager.swift */,
 				00D6034E27C052C600E274DF /* MockEventsListLocalDataManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		00D6035027C0556800E274DF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				00D6035127C0558400E274DF /* MockEventDetailsInteractor.swift */,
+				00D6035727C055B700E274DF /* MockEventDetailsView.swift */,
+				00D6035327C0559600E274DF /* MockEventDetailsPresenter.swift */,
+				00D6035527C055A800E274DF /* MockEventDetailsLocalDataManager.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -577,7 +603,10 @@
 				00311F3727C0062E008EF5C1 /* EventsListRouter.swift in Sources */,
 				00D6033527C02EA000E274DF /* EventDetailsPresenter.swift in Sources */,
 				00311F1227BFD2DF008EF5C1 /* BaseVC.swift in Sources */,
+				00D6035827C055B700E274DF /* MockEventDetailsView.swift in Sources */,
+				00D6035227C0558400E274DF /* MockEventDetailsInteractor.swift in Sources */,
 				00D6034027C0370E00E274DF /* EventViewItem.swift in Sources */,
+				00D6035427C0559600E274DF /* MockEventDetailsPresenter.swift in Sources */,
 				00311F2C27BFFA1A008EF5C1 /* EventsListPresenter.swift in Sources */,
 				00D6034927C0512600E274DF /* MockEventsListPresenter.swift in Sources */,
 				00311F2227BFE602008EF5C1 /* EventCell.swift in Sources */,
@@ -590,6 +619,7 @@
 				00D6033927C0300600E274DF /* EventDetailsRouter.swift in Sources */,
 				00311F1627BFDEE0008EF5C1 /* EventsListView.swift in Sources */,
 				00311F2827BFEAD8008EF5C1 /* StatusServer.swift in Sources */,
+				00D6035627C055A800E274DF /* MockEventDetailsLocalDataManager.swift in Sources */,
 				00D6034527C04B4900E274DF /* MockEventsListInteractor.swift in Sources */,
 				00311F1C27BFE5BC008EF5C1 /* Constants.swift in Sources */,
 			);
@@ -601,6 +631,8 @@
 			files = (
 				0088519D27BFCDAA0071278C /* EventsListPresenterTests.swift in Sources */,
 				00D6034B27C051EA00E274DF /* EventsListInteractorTests.swift in Sources */,
+				00D6035C27C0582600E274DF /* EventDetailsInteractorTests.swift in Sources */,
+				00D6035A27C0581400E274DF /* EventDetailsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
