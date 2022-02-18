@@ -172,6 +172,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		00311F3A27C01753008EF5C1 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
 		0088517927BFCDA80071278C = {
 			isa = PBXGroup;
 			children = (
@@ -197,14 +204,15 @@
 		0088518427BFCDA80071278C /* CodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				00311F3127BFFC2B008EF5C1 /* Networking */,
-				00311F2427BFE9D3008EF5C1 /* Models */,
 				0088518527BFCDA80071278C /* AppDelegate.swift */,
 				0088518727BFCDA80071278C /* SceneDelegate.swift */,
 				00311F1127BFD2DF008EF5C1 /* BaseVC.swift */,
 				0088519027BFCDAA0071278C /* LaunchScreen.storyboard */,
 				0088518B27BFCDA80071278C /* Main.storyboard */,
 				00311F1327BFDEAF008EF5C1 /* EventsList */,
+				00311F3A27C01753008EF5C1 /* EventDetails */,
+				00311F3127BFFC2B008EF5C1 /* Networking */,
+				00311F2427BFE9D3008EF5C1 /* Models */,
 				00311F1827BFE1F1008EF5C1 /* Utils */,
 				0088518E27BFCDAA0071278C /* Assets.xcassets */,
 				0088519327BFCDAA0071278C /* Info.plist */,
